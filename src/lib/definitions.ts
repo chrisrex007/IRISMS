@@ -1,12 +1,7 @@
 import { z } from "zod";
 
 export const signupStudentFormSchema = z.object({
-  email: z
-    .string()
-    .regex(/@kgpian.iitkgp.ac.in/, {
-      message: "Please enter a valid Kgpian email.",
-    })
-    .trim(),
+  email: z.string(),
   password: z
     .string()
     .min(8, { message: "Password Should be atleast 8 letters long. " })
